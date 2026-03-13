@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../db/db');
 const authMiddleware = require('../middleware/authHandlermw');
 
-// GET /api/products — get all products (protected)
+// GET route: /api/products — get all products
 router.get('/', authMiddleware, async (req, res) => {
   try {
     const result = await pool.query(
@@ -16,7 +16,7 @@ router.get('/', authMiddleware, async (req, res) => {
   }
 });
 
-// PUT /api/products/:id — update a product (protected)
+// PUT /api/products/:id — update a product 
 router.put('/:id', authMiddleware, async (req, res) => {
   const { id } = req.params;
   const {

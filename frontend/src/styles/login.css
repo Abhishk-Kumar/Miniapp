@@ -1,0 +1,304 @@
+.login-page {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Dark overlay over background */
+  .login-page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+  }
+  
+  /* Top bar */
+  .login-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  /* Hamburger button */
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+    z-index: 110;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  
+  /* Hamburger dropdown menu */
+  .hamburger-menu {
+    position: absolute;
+    top: 56px;
+    left: 14px;
+    background: white;
+    border-radius: 10px;
+    padding: 8px 0;
+    min-width: 180px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+    z-index: 200;
+  }
+  
+  .hamburger-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #444;
+    font-size: 14px;
+    transition: background 0.15s;
+  }
+  
+  .hamburger-menu a:hover {
+    background: #f0f7ff;
+    color: #1a90d9;
+  }
+  
+  /* Flag language switcher */
+  .lang-switcher {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .flag {
+    width: 34px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: 3px;
+    opacity: 0.65;
+    border: 2px solid transparent;
+    transition: opacity 0.2s, border-color 0.2s;
+    object-fit: cover;
+  }
+  
+  .flag.active {
+    opacity: 1;
+    border-color: white;
+  }
+  
+  .flag:hover {
+    opacity: 1;
+  }
+  
+  /* Login card */
+  .login-card {
+    position: relative;
+    z-index: 10;
+    background: white;
+    border-radius: 14px;
+    padding: 44px 38px 36px;
+    width: 100%;
+    max-width: 390px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  .login-logo {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 14px;
+    object-fit: contain;
+  }
+  
+  .login-card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #222;
+  }
+  
+  /* Form */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .input-group {
+    position: relative;
+    width: 100%;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    color: #333;
+    background: #fafafa;
+    transition: border-color 0.2s;
+  }
+  
+  .input-group input:focus {
+    border-color: #1a90d9;
+    background: white;
+  }
+  
+  /* Password show/hide */
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .password-wrapper input {
+    width: 100%;
+    padding: 13px 44px 13px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    color: #333;
+    background: #fafafa;
+    transition: border-color 0.2s;
+  }
+  
+  .password-wrapper input:focus {
+    border-color: #1a90d9;
+    background: white;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    color: #aaa;
+  }
+  
+  .toggle-password:hover {
+    color: #555;
+  }
+  
+  /* Eye icon SVG */
+  .eye-icon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  /* Error message */
+  .error-msg {
+    color: #e74c3c;
+    font-size: 13px;
+    text-align: left;
+    padding: 2px 4px;
+  }
+  
+  /* Login button */
+  .login-btn {
+    width: 100%;
+    padding: 13px;
+    background: #1a90d9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-top: 4px;
+    transition: background 0.2s;
+  }
+  
+  .login-btn:hover {
+    background: #1478b8;
+  }
+  
+  .login-btn:active {
+    background: #1060a0;
+  }
+  
+  /* Forgot password */
+  .forgot-link {
+    display: block;
+    margin-top: 18px;
+    color: #1a90d9;
+    font-size: 13px;
+  }
+  
+  .forgot-link:hover {
+    text-decoration: underline;
+  }
+  
+/*
+     RESPONSIVE css codes
+     */
+  
+   /* Tablet screen css*/
+  @media (max-width: 768px) {
+    .login-card {
+      max-width: 360px;
+      padding: 38px 28px 30px;
+    }
+  }
+  
+  /* Mobile portrait responsive css */
+  @media (max-width: 480px) {
+    .login-card {
+      margin: 0 16px;
+      padding: 32px 20px 28px;
+    }
+  
+    .login-card h2 {
+      font-size: 20px;
+    }
+  }
+  
+  /* Mobile landscape responsive css */
+  @media (max-height: 500px) {
+    .login-page {
+      align-items: flex-start;
+      padding: 70px 0 20px;
+    }
+  
+    .login-card {
+      padding: 24px 28px 20px;
+    }
+  
+    .login-logo {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
+    }
+  
+    .login-card h2 {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+  }
