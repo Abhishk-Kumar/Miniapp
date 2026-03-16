@@ -8,6 +8,7 @@ import {
   X, MoreHorizontal, ChevronDown,
 } from "lucide-react";
 import "../styles/pricelist.css";
+const API_BASE = import.meta.env.VITE_API_URL || '';
 
 function getScreenType() {
   const width = window.innerWidth;
@@ -64,7 +65,7 @@ async function fetchProducts() {
   setLoading(true);
 
   try {
-    const res = await fetch("/api/products", {
+    const res = await fetch(`${API_BASE}/api/products`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -96,7 +97,7 @@ async function fetchProducts() {
   async function saveProductField(productId, fieldName, fieldValue) {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch(`/api/products/${productId}`, {
+      const response = await fetch(`${API_BASE}/api/products/${productId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "../styles/login.css";
+const API_BASE = import.meta.env.VITE_API_URL || '';
 
 
 const SWEDISH_FLAG = "https://storage.123fakturere.no/public/flags/SE.png";
@@ -48,7 +49,7 @@ export default function Login({ onLogin }) {
   // Fetch translations from backend by language code (en or sv)
   async function fetchTranslations(langCode) {
     try {
-      const response = await fetch(`/api/auth/translations/${langCode}`);
+      const response = await fetch(`${API_BASE}/api/auth/translations/${langCode}`);
       const data = await response.json();
       setTranslations(data);
     } catch (err) {
@@ -70,7 +71,7 @@ export default function Login({ onLogin }) {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/auth/login", {
+      const response = await fetch(`${API_BASE}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: email, password: password }),
