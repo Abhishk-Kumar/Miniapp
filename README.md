@@ -43,6 +43,8 @@ Backend - dependencies: {
     "pg": "^8.20.0"
   }
 
+
+
 Database: (PostgreSQL) 14.17 
 
 ## Project Structure
@@ -149,6 +151,7 @@ CREATE TABLE translations (
 );
 
 */
+ADD your data to database and add credentials to .env file as described below:
 
 # Environment Variables
 
@@ -182,3 +185,5 @@ backend/package.json
 # Author
 
 Abhishek Kumar
+BACKEND_URL=https://miniapp-backend-cvm6.onrender.com/api/check
+FRONTEND_URL=https://miniapp-frontend-6772.onrender.com/

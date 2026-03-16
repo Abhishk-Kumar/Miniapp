@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,9 +10,6 @@ body {
   outline: none !important;
   -webkit-tap-highlight-color: rgba(255,255,255,0);
 }
-
-
-/* page wrapper */
 
 .login-container {
   min-height: 100vh;
@@ -27,46 +24,44 @@ body {
   width: 100%;
   height: 100%;
   background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: 100% 125%;
+  background-position: center top;
+  background-repeat: no-repeat;
   z-index: 0;
 }
 
-/* top nav portion */
 .navigation-out {
   position: relative;
   z-index: 200;
   display: flex;
   align-items: center;
-  padding: 0 32px;
   height: 68px;
+  margin: 0 125px;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
-  margin-right: 0;
   flex-shrink: 0;
 }
 
 .nav-logo img {
-  width: 52px;
-  height: 52px;
+  width: 46px;
+  height: 46px;
   object-fit: contain;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 36px;
   list-style: none;
-  flex: 1;
-  justify-content: center;
+  margin-left: auto;
 }
 
 .nav-links li a {
   color: white;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   text-decoration: none;
   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
@@ -80,7 +75,7 @@ body {
 .lang-dropdown-wrapper {
   position: relative;
   flex-shrink: 0;
-  margin-left: 0;
+  margin-left: 36px;
 }
 
 .lang-dropdown-btn {
@@ -91,7 +86,7 @@ body {
   border: none;
   cursor: pointer;
   color: white;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
   font-family: 'Open Sans', sans-serif;
@@ -119,7 +114,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   overflow: hidden;
-  min-width: 140px;
+  min-width: 145px;
   z-index: 300;
 }
 
@@ -127,9 +122,9 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 11px 16px;
+  padding: 12px 16px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 14.5px;
   color: #333;
   background: white;
   border: none;
@@ -149,7 +144,6 @@ body {
   border-radius: 2px;
 }
 
-/* Hamburger btn — for mobile only */
 .hamburger-btn {
   display: none;
   background: none;
@@ -223,7 +217,6 @@ body {
   display: block;
 }
 
-/* login content */
 .content {
   flex: 1;
   display: flex;
@@ -236,24 +229,24 @@ body {
 
 .login-content-root {
   background: white;
-  border-radius: 22px;
-  padding: 44px 56px 38px;
+  border-radius: 20px;
+  padding: 52px 60px 46px;
   width: 100%;
-  max-width: 500px;
+  max-width: 520px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.13);
 }
 
 .login-title {
   color: #ff0000;
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .field-label {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   color: #222;
   margin-bottom: 8px;
   font-weight: 400;
@@ -325,19 +318,21 @@ body {
 }
 
 .login-btn {
-  width: 100%;
-  padding: 15px;
-  background: #22c244;
+  display: block;
+  width: 65%;
+  margin: 0 auto 26px auto;
+  padding: 14px;
+  background: #07a31f;
   color: white;
   border: none;
   border-radius: 50px;
   font-size: 17px;
   font-weight: 700;
   cursor: pointer;
-  margin-bottom: 26px;
   font-family: 'Open Sans', sans-serif;
   transition: background 0.2s;
   letter-spacing: 0.2px;
+  text-align: center;
 }
 
 .login-btn:hover {
@@ -349,7 +344,6 @@ body {
   cursor: not-allowed;
 }
 
-/* Bottom links */
 .login-bottom-links {
   display: flex;
   justify-content: space-between;
@@ -358,7 +352,7 @@ body {
 
 .login-bottom-links a {
   color: #222;
-  font-size: 14.5px;
+  font-size: 16px;
   font-weight: 400;
   text-decoration: none;
 }
@@ -367,28 +361,27 @@ body {
   text-decoration: underline;
 }
 
-/* footer css */
 .footer {
   position: relative;
   z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 15px;
 }
 
-/* Top row of footer */
 .footer-top {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 80px;
+  padding: 10px 90px;
 }
 
 .footer-brand {
   color: white;
-  font-size: 26px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 500;
   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
@@ -397,13 +390,13 @@ body {
 
 .footer-links {
   display: flex;
-  gap: 20px;
+  gap: 24px;
 }
 
 .footer-links a {
   color: white;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
@@ -412,43 +405,80 @@ body {
   text-decoration: underline;
 }
 
-/* copyright css */
 .footer-bottom {
-  width: 90%;
-  border-top: 1px solid #fff;
-  padding: 8px 24px;
+  width: 88%;
+  border-top: 1px solid rgba(255,255,255,0.6);
+  padding: 6px 24px 0;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 6px;
+  margin-bottom: 15px;
 }
 
 .footer-copy {
-  color: rgba(255,255,255,0.82);
-  padding-top: 10px;
-  font-weight: 700;
+  display: block;
+  color: rgba(255,255,255,0.9);
+  padding-top: 8px;
+  font-weight: 600;
   font-size: 15px;
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
-/* Responsive css starts here: */
-
-/* Tablet screensize */
 @media (min-width: 675px) and (max-width: 899px) and (orientation: portrait) {
-  .login-content-root {
-    width: 100%;
-    max-width: 420px;
-    padding: 38px 40px 32px;
+  .navigation-out {
+    margin: 0 30px;
   }
 
   .nav-links {
-    gap: 22px;
+    gap: 20px;
   }
 
   .nav-links li a {
-    font-size: 13.5px;
+    font-size: 14px;
+  }
+
+  .lang-dropdown-btn {
+    font-size: 14px;
+  }
+
+  .login-content-root {
+    max-width: 440px;
+    padding: 40px 40px 34px;
+  }
+
+  .footer-top {
+    padding: 10px 30px;
+  }
+
+  .footer-brand {
+    font-size: 22px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1100px) {
+  .navigation-out {
+    margin: 0 40px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links li a {
+    font-size: 15px;
+  }
+
+  .lang-dropdown-btn {
+    font-size: 15px;
+  }
+
+  .footer-top {
+    padding: 10px 40px;
   }
 }
 
-/* Mobile screensize */
 @media (max-width: 674px) {
   .nav-links {
     display: none;
@@ -464,20 +494,25 @@ body {
 
   .navigation-out {
     justify-content: space-between;
-    padding: 0 16px;
+    margin: 0 16px;
+    height: 60px;
   }
 
   .lang-dropdown-wrapper {
     margin-left: 0;
   }
 
+  .lang-dropdown-btn {
+    font-size: 15px;
+  }
+
   .content {
     align-items: center;
-    padding: 12px 16px;
+    padding: 16px;
   }
 
   .login-content-root {
-    padding: 28px 24px 24px;
+    padding: 30px 24px 26px;
     border-radius: 16px;
     max-width: 100%;
   }
@@ -487,14 +522,23 @@ body {
     margin-bottom: 22px;
   }
 
+  .field-label {
+    font-size: 14px;
+  }
+
   .login-input {
     font-size: 14px;
     padding: 12px 16px;
   }
 
   .login-btn {
+    width: 85%;
     font-size: 15px;
-    padding: 14px;
+    padding: 13px;
+  }
+
+  .login-bottom-links a {
+    font-size: 14px;
   }
 
   .footer-top {
@@ -502,18 +546,39 @@ body {
   }
 
   .footer-brand {
-    font-size: 17px;
+    font-size: 18px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
   }
 
   .footer-bottom {
-    padding: 6px 16px;
+    width: 94%;
+    padding: 6px 16px 0;
+  }
+
+  .footer-copy {
+    font-size: 13px;
   }
 }
 
-/* Landscape phone screen */
 @media (max-height: 500px) {
   .navigation-out {
-    height: 52px;
+    height: 50px;
+    margin: 0 20px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+  }
+
+  .lang-dropdown-btn {
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 10px 16px;
   }
 
   .login-content-root {
@@ -536,6 +601,13 @@ body {
 
   .login-btn {
     padding: 11px;
-    margin-bottom: 14px;
+  }
+
+  .footer-brand {
+    font-size: 18px;
+  }
+
+  .footer-copy {
+    font-size: 13px;
   }
 }

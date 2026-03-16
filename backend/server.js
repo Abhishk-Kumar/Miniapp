@@ -15,7 +15,11 @@ const productRoutes = require('./routes/products');
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 
-
+app.get('/home', (req,res)=>{
+    res.json({
+        status:'hello server is working properly'
+    });
+});
 app.get('/api/check', (req,res)=>{
     res.json({
         status:'api is working properly'
