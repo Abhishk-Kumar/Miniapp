@@ -53,28 +53,44 @@ export default function PriceList({ onLogout }) {
     fetchProducts();
   }, []);
 
-  async function fetchProducts() {
-    const token = localStorage.getItem("token");
-    if (!token) { onLogout(); return; }
-
-    setLoading(true);
-    try {
-      const response = await fetch("/api/products", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      if (response.status === 401) {
-        localStorage.removeItem("token");
-        onLogout();
-        return;
-      }
-      const data = await response.json();
-      setProducts(data);
-    } catch (err) {
-      console.error("Failed to fetch products:", err);
-    } finally {
-      setLoading(false);
-    }
+// token expiry handling and fetching products
+async function fetchProducts() {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    onLogout();
+    return;
   }
+
+  setLoading(true);
+
+  try {
+    const res = await fetch("/api/products", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    // Token expired or invalid
+    if (res.status === 401) {
+      localStorage.removeItem("token");
+      onLogout();
+      return;
+    }
+
+    // Other server errors
+    if (!res.ok) {
+      throw new Error("Failed to load products");
+    }
+
+    const data = await res.json();
+    setProducts(data);
+
+  } catch (err) {
+    console.error("Failed to fetch products:", err);
+  } finally {
+    setLoading(false);
+  }
+}
 
   // Save single product field to the db
   async function saveProductField(productId, fieldName, fieldValue) {

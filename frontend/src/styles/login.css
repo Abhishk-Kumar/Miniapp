@@ -12,8 +12,8 @@ body {
 }
 
 
-   /* page wrapper */
-   
+/* page wrapper */
+
 .login-container {
   min-height: 100vh;
   display: flex;
@@ -38,29 +38,27 @@ body {
   z-index: 200;
   display: flex;
   align-items: center;
-  padding: 0 24px;
-  height: 64px;
+  padding: 0 32px;
+  height: 68px;
 }
-
 
 .nav-logo {
   display: flex;
   align-items: center;
-  margin-right: 40px;
+  margin-right: 0;
   flex-shrink: 0;
 }
 
 .nav-logo img {
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
 }
-
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 40px;
   list-style: none;
   flex: 1;
   justify-content: center;
@@ -68,7 +66,7 @@ body {
 
 .nav-links li a {
   color: white;
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 500;
   text-decoration: none;
   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
@@ -79,22 +77,21 @@ body {
   text-decoration: underline;
 }
 
-
 .lang-dropdown-wrapper {
   position: relative;
   flex-shrink: 0;
-  margin-left: 40px;
+  margin-left: 0;
 }
 
 .lang-dropdown-btn {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   background: none;
   border: none;
   cursor: pointer;
   color: white;
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 500;
   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
   font-family: 'Open Sans', sans-serif;
@@ -102,8 +99,8 @@ body {
 }
 
 .lang-dropdown-btn img {
-  width: 26px;
-  height: 18px;
+  width: 28px;
+  height: 19px;
   object-fit: cover;
   border-radius: 2px;
 }
@@ -113,7 +110,6 @@ body {
   margin-left: 2px;
   color: white;
 }
-
 
 .lang-dropdown-menu {
   position: absolute;
@@ -153,7 +149,7 @@ body {
   border-radius: 2px;
 }
 
-/* Hamburger btm — for mobile only */
+/* Hamburger btn — for mobile only */
 .hamburger-btn {
   display: none;
   background: none;
@@ -171,7 +167,6 @@ body {
   background: white;
   border-radius: 2px;
 }
-
 
 .mobile-drawer {
   position: fixed;
@@ -228,7 +223,7 @@ body {
   display: block;
 }
 
-/* logincontent */
+/* login content */
 .content {
   flex: 1;
   display: flex;
@@ -239,64 +234,63 @@ body {
   padding: 20px;
 }
 
-
 .login-content-root {
   background: white;
-  border-radius: 18px;
-  padding: 38px 44px 32px;
+  border-radius: 22px;
+  padding: 44px 56px 38px;
   width: 100%;
-  max-width: 420px;
+  max-width: 500px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.13);
 }
 
 .login-title {
   color: #ff0000;
-  font-size: 28px;
+  font-size: 34px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 26px;
+  margin-bottom: 30px;
 }
 
 .field-label {
   display: block;
-  font-size: 13.5px;
+  font-size: 14px;
   color: #222;
-  margin-bottom: 7px;
+  margin-bottom: 8px;
   font-weight: 400;
 }
 
 .login-input {
   width: 100%;
-  padding: 12px 16px;
-  border: 1px solid #ddd;
+  padding: 13px 18px;
+  border: 1px solid #e0e0e0;
   border-radius: 50px;
-  font-size: 14px;
+  font-size: 15px;
   outline: none;
   color: #333;
   margin-bottom: 18px;
-  background: white;
+  background: #f7f7f7;
   font-family: 'Open Sans', sans-serif;
   transition: border-color 0.2s;
 }
 
 .login-input:focus {
   border-color: #bbb;
+  background: #f2f2f2;
 }
-
 
 .password-wrapper {
   position: relative;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 .password-wrapper .login-input {
   margin-bottom: 0;
-  padding-right: 44px;
+  padding-right: 48px;
 }
 
 .toggle-password {
   position: absolute;
-  right: 14px;
+  right: 16px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
@@ -322,33 +316,32 @@ body {
   stroke-linejoin: round;
 }
 
-
 .error-msg {
   color: #cc0000;
-  font-size: 13px;
-  margin-bottom: 12px;
-  text-align: center;
+  font-size: 13.5px;
+  margin-bottom: 14px;
+  text-align: left;
+  padding-left: 4px;
 }
-
 
 .login-btn {
   width: 100%;
-  padding: 14px;
-  background: #2db843;
+  padding: 15px;
+  background: #22c244;
   color: white;
   border: none;
   border-radius: 50px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 700;
   cursor: pointer;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
   font-family: 'Open Sans', sans-serif;
   transition: background 0.2s;
   letter-spacing: 0.2px;
 }
 
 .login-btn:hover {
-  background: #28a83d;
+  background: #1db53e;
 }
 
 .login-btn:disabled {
@@ -364,8 +357,9 @@ body {
 }
 
 .login-bottom-links a {
-  color: #333;
-  font-size: 13.5px;
+  color: #222;
+  font-size: 14.5px;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -373,7 +367,7 @@ body {
   text-decoration: underline;
 }
 
- /* footer css  */
+/* footer css */
 .footer {
   position: relative;
   z-index: 10;
@@ -393,14 +387,13 @@ body {
 
 .footer-brand {
   color: white;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 600;
   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
   gap: 4px;
 }
-
 
 .footer-links {
   display: flex;
@@ -409,8 +402,8 @@ body {
 
 .footer-links a {
   color: white;
-  font-weight:300;
-  font-size: 15px;
+  font-weight: 400;
+  font-size: 14px;
   text-decoration: none;
   text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
@@ -436,17 +429,18 @@ body {
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
-/* Responsive css starts here:  */
+/* Responsive css starts here: */
 
 /* Tablet screensize */
 @media (min-width: 675px) and (max-width: 899px) and (orientation: portrait) {
   .login-content-root {
     width: 100%;
-    max-width: 380px;
+    max-width: 420px;
+    padding: 38px 40px 32px;
   }
 
   .nav-links {
-    gap: 18px;
+    gap: 22px;
   }
 
   .nav-links li a {
@@ -483,13 +477,24 @@ body {
   }
 
   .login-content-root {
-    padding: 28px 22px 24px;
-    border-radius: 14px;
+    padding: 28px 24px 24px;
+    border-radius: 16px;
+    max-width: 100%;
   }
 
   .login-title {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 26px;
+    margin-bottom: 22px;
+  }
+
+  .login-input {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .login-btn {
+    font-size: 15px;
+    padding: 14px;
   }
 
   .footer-top {
@@ -512,21 +517,21 @@ body {
   }
 
   .login-content-root {
-    padding: 20px 28px 16px;
+    padding: 20px 32px 16px;
   }
 
   .login-title {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 14px;
   }
 
   .login-input {
-    padding: 9px 14px;
+    padding: 9px 16px;
     margin-bottom: 12px;
   }
 
   .password-wrapper {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   .login-btn {

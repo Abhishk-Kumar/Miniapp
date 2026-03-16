@@ -218,7 +218,7 @@ export default function Login({ onLogin }) {
 
           {/* Title */}
           <h2 className="login-title">
-            {getText("login_title", "Logga in", "Log in")}
+            {getText("login_title", "Loggain", "Log in")}
           </h2>
 
           <form onSubmit={handleLoginSubmit}>
